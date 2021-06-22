@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>TarsaVPN - homepage</title>
+
+      <!-- favicon -->
+      <link rel="icon" type="image/png" href="img/favicon.png" />
+
+      <!-- add stylesheet -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+
+      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+            integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+
+      <section class="hero">
+            <div class="container-first">
+                  <header>
+                        <div class="logo">
+                              <img src="img/logo_white.png" alt="ruby creates web logo">
+                        </div>
+
+
+                        <div class="login">
+                              <a href="#" class="btn">Comming soon</a>
+                        </div>
+                  </header>
+
+                  <div class="mid">
+                        <div class="container-first">
+                              <div class="details">
+                                    <h1>Work at the speed<br>of <span>light</span></h1>
+                                    <p>Free VPN client without downloading for any operating system: Windows, macOS,
+                                          Android, iOS & more.</p>
+                              </div>
+
+                              <div class="action">
+                                    <a href="#preorder" class="btn btn-pri">Preorder</a>
+                              </div>
+
+                              <div class="pros">
+                                    <p><i class="fas fa-check-circle"></i> No software to install</p>
+                                    <p><i class="fas fa-check-circle"></i> Get live updates</p>
+                              </div>
+                        </div>
+                  </div>
+
+
+                  <footer>
+                        <div class="connect">
+                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                  </footer>
+            </div>
+            <div class="container-secound">
+                  <div class="left column">
+                        <div class="header">
+                              <a id="preorder"></a>
+                              <h1 class="ml12">preorder</h1></a>
+                        </div>
+                        <div class="back-btn">⟵ get higher level of internet experience</div>
+                        <div class="price">
+                              <span>total</span>
+                              <span>$0.00</span>
+                        </div>
+                  </div>
+                  <div class="right column">
+                        <div class="nav">
+                              <div class="nav-item">shopping</div>
+                              ➝
+                              <div class="nav-item">address</div>
+                              ➝
+                              <div class="nav-item active">checkout</div>
+                        </div>
+                        <div class="card-img">
+                              <img src="img/card.png" alt="" />
+                        </div>
+                        <div class="form">
+                              <div class="form-row">
+                                    <input type="text" placeholder="card number" />
+                              </div>
+                              <div class="form-row">
+                                    <input type="text" placeholder="date" />
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <input type="text" placeholder="cvv" />
+                              </div>
+                        </div>
+                        <div class="btn">
+                              <button>checkout</button>
+                        </div>
+                  </div>
+            </div>
+            <main>
+                  <div class="slider">
+                      <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+                      <nav>
+                          <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+                          <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+                      </nav>
+                  </div>
+              </main>
+              <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+        <!-- Pixi JS -->
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+
+        <!-- Slider Plugin -->
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+            <script>
+                  var textWrapper = document.querySelector(".ml12");
+                  textWrapper.innerHTML = textWrapper.textContent.replace(
+                        /\S/g,
+                        "<span class='letter'>$&</span>"
+                  );
+
+                  anime.timeline().add({
+                        targets: ".ml12 .letter",
+                        translateY: [100, 0],
+                        translateZ: 0,
+                        opacity: [0, 1],
+                        easing: "easeOutExpo",
+                        duration: 2000,
+                        delay: (el, i) => 1200 + 60 * i,
+                  });
+
+                  TweenMax.from(".logo", 3, {
+                        y: "40",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                  });
+
+                  TweenMax.from(".back-btn", 3, {
+                        y: "40",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                        delay: 0.4,
+                  });
+
+                  TweenMax.from(".right", 3, {
+                        y: "40",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                        delay: 0.6,
+                  });
+
+                  TweenMax.from(".card-img", 2, {
+                        y: "60",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                        delay: 1.2,
+                  });
+
+                  TweenMax.from(".btn", 2, {
+                        y: "60",
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                        delay: 1.4,
+                  });
+
+                  TweenMax.staggerFrom(
+                        ".price > span",
+                        1, {
+                              y: "40",
+                              opacity: 0,
+                              ease: Power2.easeOut,
+                              delay: 1.6,
+                        },
+                        0.2
+                  );
+
+                  TweenMax.staggerFrom(
+                        ".nav > .nav-item",
+                        1, {
+                              y: "40",
+                              opacity: 0,
+                              ease: Power2.easeOut,
+                              delay: 1.6,
+                        },
+                        0.2
+                  );
+
+                  TweenMax.staggerFrom(
+                        ".form > div",
+                        1, {
+                              y: "40",
+                              opacity: 0,
+                              ease: Power2.easeOut,
+                              delay: 2,
+                        },
+                        0.2
+                  );
+
+                  const body = document.body,
+                        scrollWrap = document.getElementsByClassName("hero")[0],
+                        height = scrollWrap.getBoundingClientRect().height - 1,
+                        speed = 0.04;
+
+                  var offset = 0;
+
+                  body.style.height = Math.floor(height) + "px";
+
+                  function smoothScroll() {
+                        offset += (window.pageYOffset - offset) * speed;
+
+                        var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                        scrollWrap.style.transform = scroll;
+
+                        callScroll = requestAnimationFrame(smoothScroll);
+                  }
+
+                  smoothScroll();
+
+                  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                              e.preventDefault();
+
+                              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                    behavior: 'smooth'
+                              });
+                        });
+                  });
+               
+
+        
+            const images = ["img/img-1.jpg", "img/img-2.jpg", "img/img-3.jpg"];
+            const texts = [["UNLOCKED"], ["WITHOUT TRACKING"], ["BE FREE"]];
+
+            rgbKineticSlider = new rgbKineticSlider({
+                slideImages: images,
+                itemsTitles: texts,
+
+                backgroundDisplacementSprite:
+                    "http://hmongouachon.com/_demos/rgbKineticSlider/map-9.jpg",
+                cursorDisplacementSprite:
+                    "http://hmongouachon.com/_demos/rgbKineticSlider/displace-circle.png",
+                cursorScaleIntensity: 0.6,
+                cursorMomentum: 0.14,
+
+                swipe: true,
+                swipeDistance: window.innerWidth * 0.4,
+                swipeScaleIntensity: 2,
+
+                slideTransitionDuration: 0.8,
+                transitionScaleIntensity: 30,
+                transitionScaleAmplitude: 160,
+
+                nav: true,
+                navElement: ".main-nav",
+
+                imagesRgbEffect: false,
+                imagesRgbIntensity: 4,
+                navImagesRgbIntensity: 120,
+
+                textsDisplay: true,
+                textTitleSize: 144,
+                textsTiltEffect: true,
+                googleFonts: ["Playfair Display:400"],
+                textsRgbEffect: true,
+                textsRgbIntensity: 1,
+            });
+        
+            </script>
+      </section>
+
+
+      <!-- add script files -->
+      <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>

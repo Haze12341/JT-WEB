@@ -1,0 +1,75 @@
+body {
+	font-family: 'Verdana';
+	text-transform: uppercase;
+	background: #F038FF;
+	height: 100%;
+	overflow: hidden;
+	color: #70E4EF;
+}
+
+h1 {
+	font-size: 35px;
+	text-align: center;
+	padding: 100px;
+}
+
+.layer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: transform .5s ease-in-out;
+	transform: perspective(800px) scale(1) translateX(0) rotateY(0);
+	transform-style: preserve-3d;
+}
+
+
+nav ul {
+	font-size: larger;
+	line-height: 2;
+	position: absolute;
+	left: 30px;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.front {
+	background: #E2EF70;
+	padding: 30px;
+	overflow-y: scroll;
+}
+
+p {
+	margin: 30px;
+}
+
+input[type=checkbox] {
+	transform: scale(5);
+	padding: 30px;
+}
+
+input[type="checkbox"] {
+	position: absolute;
+	z-index: 9999;
+	left: 30px;
+	top: 30px;
+}
+
+input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked#switch+.front {
+	transform: perspective(900px) scale(0.5) translateX(16.66%) rotateY(-25deg);
+}
